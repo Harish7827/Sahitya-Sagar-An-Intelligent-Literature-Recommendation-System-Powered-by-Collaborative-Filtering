@@ -1,0 +1,31 @@
+* {
+    font-family: "Gotu";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cinzel {
+    font-family: 'Cinzel', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 12px 25px rgba(255, 223, 0, 0.4);
+}
+
+.btn-primary {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #facc15;
+    transform: translateY(-2px);
+}

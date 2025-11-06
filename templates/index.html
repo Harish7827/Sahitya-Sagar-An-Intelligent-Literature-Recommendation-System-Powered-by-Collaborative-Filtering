@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sahitya Sagar - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Gotu&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body class="bg-gray-900 text-yellow-300">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo / Brand Name -->
+        <a
+          href="/"
+          class="text-5xl cinzel text-yellow-300 hover:text-yellow-400 transition duration-300"
+        >
+          Sahitya Sagar
+        </a>
+
+        <!-- Menu -->
+        <ul class="flex space-x-6 text-lg md:flex">
+          <li>
+            <a
+              href="/"
+              class="text-yellow-100 cinzel hover:text-yellow-400 transition duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/recommendation"
+              class="text-yellow-100 cinzel hover:text-yellow-400 transition duration-300"
+              >Recommendations</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-yellow-100 cinzel hover:text-yellow-400 transition duration-300"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Landing Page Section -->
+    <header
+      id="home"
+      class="relative overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-black py-12"
+    >
+      <!-- Subtle Animated Background Orbs -->
+      <div
+        class="absolute top-0 left-0 w-[480px] h-[480px] bg-yellow-400/10 rounded-full blur-[120px] animate-pulse -translate-x-20 -translate-y-10"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-[100px] animate-ping translate-x-16 translate-y-16"
+      ></div>
+
+      <!-- Divider -->
+      <div
+        class="mx-auto w-72 h-1.5 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 rounded-full mb-4 shadow-[0_0_10px_rgba(255,215,0,0.4)]"
+      ></div>
+
+      <!-- Content Container -->
+      <div class="relative z-10 container mx-auto px-6 text-center max-w-6xl">
+        <!-- Title -->
+        <h1
+          class="text-7xl font-extrabold tracking-tight mb-2 cinzel text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-500 drop-shadow-[0_4px_12px_rgba(255,215,0,0.25)]"
+        >
+          Sahitya Sagar
+        </h1>
+
+        <!-- English Subtitle -->
+        <p
+          class="text-2xl font-semibold mb-2 max-w-5xl mx-auto leading-relaxed"
+        >
+          An Intelligent Literature Recommendation System Powered by
+          Collaborative Filtering
+        </p>
+
+        <!-- Hindi Subtitle -->
+        <h2
+          class="text-2xl text-yellow-300 mb-2 leading-snug tracking-wide"
+        >
+          साहित्य सागर : सहबुद्धि द्वारा संचालित एक प्रज्ञासंपन्न साहित्य
+          अनुशंसा प्रणाली
+        </h2>
+
+        <!-- Presented By -->
+        <h3 class="text-xl text-yellow-400 mb-4">
+          हरीश चंद्र की प्रस्तुति
+        </h3>
+
+        <!-- Divider -->
+        <div
+          class="mx-auto w-72 h-1.5 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-400 rounded-full mb-4 shadow-[0_0_10px_rgba(255,215,0,0.4)]"
+        ></div>
+
+        <!-- Information Card -->
+        <div
+          class="max-w-xl mx-auto bg-gradient-to-br from-gray-800/70 to-gray-900/70 border border-yellow-500/30 backdrop-blur-2xl rounded-2xl shadow-[0_0_25px_rgba(255,215,0,0.15)] p-5 text-left hover:shadow-[0_0_40px_rgba(255,215,0,0.25)] hover:scale-[1.01] transition-all duration-500"
+        >
+          <h3
+            class="text-xl font-bold text-yellow-300 mb-4 text-center tracking-wide uppercase"
+          >
+            Project Information
+          </h3>
+          <div
+            class="grid grid-cols-2 gap-6 text-lg text-gray-200"
+          >
+            <p>
+              <span class="font-semibold text-yellow-400">Name:</span> Harish
+              Chandra
+            </p>
+            <p>
+              <span class="font-semibold text-yellow-400">Course:</span> A LEVEL
+            </p>
+            <p>
+              <span class="font-semibold text-yellow-400">Institute:</span>
+              NIELIT Inderlok
+            </p>
+            <p>
+              <span class="font-semibold text-yellow-400">Batch:</span> DIA - 68
+            </p>
+            <p>
+              <span class="font-semibold text-yellow-400"
+                >Registration No:</span
+              >
+              1420370
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Info Section -->
+    <section id="info" class="container mx-auto px-10 py-6 ">
+      <div class="flex flex-row items-center gap-10">
+        <!-- Image Section -->
+        <div class="w-1/2 order-1">
+          <img
+            src="{{ url_for('static', filename='images/Home.gif') }}"
+            alt="Bookshelf"
+            class="ml-12 rounded-lg shadow-lg object-cover"
+          />
+        </div>
+
+        <!-- Text Section -->
+        <div class="w-1/2 order-2 mt-0 space-y-8 text-justify">
+          <!-- Heading -->
+          <h2
+            class="text-3xl text-left cinzel sm:text-5xl font-semibold text-blue-500 leading-tight"
+          >
+            Step into the World of Books at
+            <span class="text-orange-600 cinzel">Sahitya Sagar</span>
+          </h2>
+
+          <!-- Paragraph -->
+          <p class="text-xl text-gray-300">
+            At Sahitya Sagar, we believe in the transformative power of books.
+            Whether you're seeking inspiration, knowledge, or simply a new
+            adventure, our collection is designed to spark your curiosity and
+            enrich your life.
+            <br /><br />
+            Join us on a journey where every page brings something new—stories
+            that will inspire your imagination, expand your horizons, and
+            encourage a lifelong love for reading.
+          </p>
+
+          <!-- Call to Action Button -->
+          <a
+            href="#recommendation"
+            class="inline-block cinzel bg-yellow-300 text-gray-900 px-8 py-4 rounded-lg shadow-lg mt-6 font-extrabold transition duration-300 hover:bg-yellow-400 hover:scale-105"
+          >
+            Explore Our Collection
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-10">
+      <div class="container mx-auto text-center relative z-10 px-4">
+        <!-- Heading -->
+        <h1
+          class="text-5xl cinzel font-bold text-yellow-300 mb-1 leading-tight"
+        >
+          Explore Sahitya Sagar – A treasure trove of stories, wisdom, and
+          adventure.
+        </h1>
+
+        <!-- Literary Excerpt Section -->
+        <div class="container mx-auto px-4 py-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- First Quote (Malik Mohammad Jayasi) -->
+            <blockquote
+              class="text-xl text-yellow-100 hindi justify-self-center"
+            >
+              "कभी सर्दी का तांडव तो कभी गर्मी का दुःख — बारहमासा"
+              <span class="block cinzel mt-2 text-yellow-300 font-semibold">
+                — Malik Mohammad Jayasi
+              </span>
+            </blockquote>
+
+            <!-- Second Quote (Prem Chand) -->
+            <blockquote
+              class="text-xl text-yellow-100 hindi justify-self-center"
+            >
+              "हमारा धर्म मानवता है, जो जीते जी दूसरों का भला करता है वही असली
+              संत है।"
+              <span class="block cinzel mt-2 text-yellow-300 font-semibold">
+                — Prem Chand
+              </span>
+            </blockquote>
+
+            <!-- Third Quote (Harivansh Rai Bachchan) -->
+            <blockquote
+              class="text-xl text-yellow-100 hindi justify-self-center"
+            >
+              "सपने वो नहीं जो हम सोते वक्त देखते हैं, सपने वो हैं जो हमें सोने
+              नहीं देते।"
+              <span class="block cinzel mt-2 text-yellow-300 font-semibold">
+                — Harivansh Rai Bachchan
+              </span>
+            </blockquote>
+
+            <!-- Fourth Quote (Mahadevi Verma) -->
+            <blockquote
+              class="text-xl text-yellow-100 hindi justify-self-center"
+            >
+              "कविता एक प्रकाश है, जो जीवन की अंधकार को दूर कर देती है।"
+              <span class="block cinzel mt-2 text-yellow-300 font-semibold">
+                — Mahadevi Verma
+              </span>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Call to Action (Button) -->
+        <a
+          href="/recommendation"
+          class="inline-block cinzel bg-yellow-300 text-gray-900 px-8 py-4 rounded-lg shadow-2xl font-extrabold transform transition duration-300 hover:bg-yellow-400 hover:scale-105 hover:shadow-2xl"
+        >
+          Get Recommendations
+        </a>
+      </div>
+    </section>
+
+    <!-- Top Books Section -->
+    <section id="recommendation" class="container mx-auto py-5 px-6">
+      <h2
+        class="cinzel text-4xl font-semibold text-yellow-300 mb-10 text-center"
+      >
+        Top 100 Selling Books
+      </h2>
+
+      <div class="grid grid-cols-4 gap-8">
+        {% for i in range(book_name|length) %}
+        <div
+          class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-300"
+        >
+          <a href="{{ url_for('book_detail', book_name=book_name[i]) }}">
+            <img
+              src="{{ image[i] }}"
+              alt="{{ book_name[i] }}"
+              class="h-64 w-full object-cover transition duration-300 hover:opacity-90"
+            />
+          </a>
+          <div class="p-4">
+            <h3 class="text-lg font-bold cinzel text-yellow-300 truncate">
+              {{ book_name[i] }}
+            </h3>
+            <p class="text-sm text-gray-300 mt-2 space-y-1">
+              <span class="font-semibold">Author:</span> {{ author[i] }}<br />
+              <span class="font-semibold">Publisher:</span> {{ publisher[i]
+              }}<br />
+              <span class="font-semibold">Votes:</span> {{ votes[i] }}<br />
+              <span class="font-semibold">Rating:</span> {{ rating[i] }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container mx-auto px-6 py-5">
+      <!-- Section Title -->
+      <div class="text-center pt-5 mb-5">
+        <span class="cinzel font-bold tracking-tight text-blue-500 text-5xl">
+          About Us
+        </span>
+      </div>
+
+      <!-- Flex Layout for Content and Image -->
+      <div class="flex max-w-screen-xl mx-auto px-5">
+        <!-- Left Section: Image -->
+        <div class="w-1/2 p-10 order-2 relative">
+          <img
+            src="{{ url_for('static', filename='images/About.jpg') }}"
+            alt="Sahitya Sagar"
+            class="rounded-lg shadow-xl w-full transform transition-all duration-300 hover:scale-105"
+          />
+        </div>
+
+        <!-- Right Section: Content -->
+        <div class="sm:w-1/2 p-5 text-justify">
+          <!-- Our Story -->
+          <section id="our-story">
+            <h2 class="my-4 font-bold text-4xl text-white cinzel">
+              Our Story at
+              <span class="text-indigo-600 cinzel">Sahitya Sagar</span>
+            </h2>
+            <p class="text-gray-300 text-xl">
+              Founded in 2023, Sahitya Sagar was born from our passion for books
+              and a commitment to providing readers with an extensive and
+              curated selection of literature. We are more than just a
+              bookstore; we are a place where ideas are shared, minds are
+              inspired, and stories come alive.
+              <br /><br />
+              Our journey started with a humble dream: to create a place where
+              readers could find inspiration, entertainment, and knowledge in
+              the form of books. We hope to make the world of literature
+              accessible to all, no matter where you are.
+              <br /><br />
+              We are proud to serve book lovers worldwide, offering unique
+              collections that cater to all tastes and preferences.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Flex Layout for Content and Image -->
+      <div class="flex max-w-screen-xl mx-auto px-5">
+        <!-- Left Section: Image -->
+        <div class="w-1/2 p-10 order-1 relative">
+          <img
+            src="{{ url_for('static', filename='images/Banner.png') }}"
+            alt="Sahitya Sagar"
+            class="rounded-lg shadow-xl w-full transform transition-all duration-300 hover:scale-105"
+          />
+        </div>
+
+        <!-- Left Section: Content -->
+        <div class="sm:w-1/2 p-5 order-2 text-justify">
+          <!-- Developer’s Message -->
+          <section id="developer-message" class="mt-6">
+            <h3 class="my-4 font-bold cinzel text-4xl">Developer’s Message</h3>
+            <p class="text-gray-300 mt-4 text-xl">
+              "Books are a gateway to the world. Our goal is to make literature
+              accessible to everyone, regardless of where they are. From rare
+              finds to modern classics, we have something for every reader." -
+              <strong>Harish Chandra</strong>, Developer of Sahitya Sagar.
+            </p>
+            <p class="text-gray-300 mt-4 text-xl">
+              At Sahitya Sagar, we strive to create a space where literature
+              connects with every reader’s heart and mind. As a passionate
+              advocate for the power of storytelling, I believe that books shape
+              our perceptions, challenge our beliefs, and provide us with
+              endless avenues for exploration.
+            </p>
+            <p class="text-gray-300 mt-4 text-xl">
+              Thank you for being part of our growing community. Let’s continue
+              to celebrate the art of reading and the joy it brings to our
+              lives.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Why Choose Us Section -->
+      <section id="why-choose-us" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 class="py-1 font-bold cinzel text-4xl">
+          Why Choose Sahitya Sagar?
+        </h2>
+        <p class="text-gray-300 text-xl cinzel">
+          We offer more than just books—we provide an experience for book
+          lovers. Here’s why you should choose us:
+        </p>
+        <ul class="text-gray-300 pt-4 list-disc pl-6 text-lg">
+          <li><strong>Exclusive Releases:</strong> Access new books first.</li>
+          <li>
+            <strong>Personalized Recommendations:</strong> Tailored book
+            suggestions for every reader.
+          </li>
+          <li>
+            <strong>Supporting Local Authors:</strong> A platform for emerging
+            voices.
+          </li>
+          <li>
+            <strong>Eco-friendly Practices:</strong> We are committed to
+            reducing our environmental footprint.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Our Milestones Section -->
+      <section
+        id="milestones"
+        class="mt-6 p-8 bg-gray-800 rounded-lg shadow-xl"
+      >
+        <h2 class="py-1 font-bold text-4xl cinzel">Our Milestones</h2>
+        <ul class="text-gray-300 pt-4 list-disc pl-6 text-lg">
+          <li>Founded in 2023 with the vision to connect readers globally.</li>
+          <li>Over 10,000 books sold in our first year of operation.</li>
+          <li>Expanded our collection to include over 50 genres.</li>
+          <li>
+            In 2024, we plan to launch a mobile app to enhance user experience.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Our Values Section -->
+      <section
+        id="our-values"
+        class="mt-6 p-8 bg-gray-800 rounded-lg shadow-xl"
+      >
+        <h2 class="py-1 font-bold text-4xl cinzel">Our Values</h2>
+        <p class="text-gray-300 cinzel text-xl">
+          At Sahitya Sagar, we believe in the power of books to inspire,
+          educate, and entertain. Our core values are:
+        </p>
+        <ul class="text-gray-300 pt-4 list-disc pl-6 text-lg">
+          <li>
+            <strong>Quality First:</strong> We curate only the best books.
+          </li>
+          <li>
+            <strong>Inclusivity:</strong> Books from all cultures and
+            perspectives.
+          </li>
+          <li>
+            <strong>Environmental Responsibility:</strong> Eco-friendly
+            practices in our operations.
+          </li>
+          <li>
+            <strong>Customer Focus:</strong> We care about providing the best
+            service.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Customer Testimonials Section -->
+      <section
+        id="testimonials"
+        class="mt-6 bg-gray-800 p-8 rounded-lg shadow-lg"
+      >
+        <h2 class="my-1 font-bold text-4xl cinzel text-center">
+          What Our Customers Say
+        </h2>
+        <div class="pt-8 space-y-0 grid grid-cols-2 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial text-center">
+            <p
+              class="text-gray-300 text-xl p-5 bg-slate-700 rounded-xl shadow-xl mb-2"
+            >
+              "Sahitya Sagar has an amazing collection of books. I always find
+              what I need and more."
+            </p>
+            <p class="font-semibold text-xl">Sarah Thompson</p>
+            <p class="text-gray-300">Regular Customer</p>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial text-center">
+            <p
+              class="text-gray-300 text-xl p-5 bg-slate-700 rounded-xl shadow-xl mb-2"
+            >
+              "I love the personalized recommendations. The staff truly cares
+              about what books I enjoy."
+            </p>
+            <p class="font-semibold text-xl">Michael Johnson</p>
+            <p class="text-gray-300">Book Lover</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Us Section -->
+      <section
+        id="contact-us"
+        class="mt-6 bg-gray-800 p-8 rounded-lg shadow-lg"
+      >
+        <h2 class="py-1 font-bold text-4xl cinzel">Contact Us</h2>
+        <p class="text-gray-300 text-xl">
+          Have questions or suggestions? Reach out to us at
+          <a href="mailto:info@sahityasagar.com" class="text-yellow-400"
+            >info@sahityasagar.com</a
+          >.
+        </p>
+      </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-1">
+      <div class="container mx-auto text-center text-yellow-400">
+        <p class="text-lg mb-2 cinzel">Follow us on:</p>
+        <div class="flex justify-center space-x-8 mb-4">
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Facebook"
+          >
+            <i class="fab fa-facebook-square text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Twitter"
+          >
+            <i class="fab fa-twitter text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Instagram"
+          >
+            <i class="fab fa-instagram text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on LinkedIn"
+          >
+            <i class="fab fa-linkedin text-3xl"></i>
+          </a>
+        </div>
+        <p class="text-sm cinzel">© 2025 Sahitya Sagar. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

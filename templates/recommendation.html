@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahitya Sagar - Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Gotu&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body class="bg-gray-900 text-yellow-300 font-Poppins">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo / Brand Name -->
+        <a
+          href="/"
+          class="text-5xl cinzel text-yellow-300 hover:text-yellow-400 transition duration-300"
+        >
+          Sahitya Sagar
+        </a>
+
+        <!-- Menu -->
+        <ul class="flex space-x-6 text-lg md:flex">
+          <li>
+            <a
+              href="/"
+              class="text-yellow-100 cinzel hover:text-yellow-400 transition duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/recommendation"
+              class="text-yellow-100 cinzel hover:text-yellow-400 transition duration-300"
+              >Recommendations</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Recommendation Search -->
+    <section class="container mx-auto py-20">
+      <div class="text-center mb-10">
+        <h1
+          class="text-5xl font-bold text-yellow-400 underline mb-2 cinzel"
+        >
+          Book Recommendations
+        </h1>
+
+        <h1
+          class="text-7xl font-extrabold tracking-tight mb-2 cinzel text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-500 drop-shadow-[0_4px_12px_rgba(255,215,0,0.25)]"
+        >
+          Sahitya Sagar
+        </h1>
+
+        <!-- English Subtitle -->
+        <p
+          class="text-2xl cinzel font-semibold mb-2 max-w-7xl mx-auto leading-relaxed"
+        >
+          An Intelligent Literature Recommendation System Powered by
+          Collaborative Filtering
+        </p>
+
+        <!-- Hindi Subtitle -->
+        <h2 class="text-2xl text-yellow-300 mb-2 leading-snug tracking-wide">
+          साहित्य सागर : सहबुद्धि द्वारा संचालित एक प्रज्ञासंपन्न साहित्य
+          अनुशंसा प्रणाली
+        </h2>
+
+        <p class="text-gray-300 text-lg">
+          Enter a book name or genre to get personalized suggestions.
+        </p>
+      </div>
+
+      <form action="/recommend_books" method="post" class="mb-10">
+        <div class="flex items-center justify-center space-x-4">
+          <input
+            name="user_input"
+            type="text"
+            class="w-2/3 p-4 border text-gray-300 bg-gray-900 border-yellow-400 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300"
+            placeholder="Enter book or genre"
+          />
+          <button
+            type="submit"
+            class="ml-4 bg-yellow-500 cinzel text-gray-900 font-extrabold px-6 py-3 rounded-full hover:bg-yellow-600 transition transform hover:scale-105"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      {% if error %}
+      <div class="text-center text-red-500 mb-6 font-semibold">{{ error }}</div>
+      {% endif %} {% if data %}
+      <h2
+        class="text-3xl font-semibold text-yellow-300 mb-6 cinzel text-center"
+      >
+        Because You Liked "{{ suggested }}"
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      >
+        {% for i in data %}
+        <div
+          class="card bg-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <a href="{{ url_for('book_detail', book_name=i[0]) }}">
+            <img
+              src="{{ i[2] }}"
+              alt="{{ i[0] }}"
+              class="h-64 w-full object-cover rounded-t-lg"
+            />
+          </a>
+          <div class="p-6">
+            <h4 class="text-xl font-bold text-yellow-300 cinzel">{{ i[0] }}</h4>
+            <h5 class="text-lg text-gray-300">{{ i[1] }}</h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-1">
+      <div class="container mx-auto text-center text-yellow-400">
+        <p class="text-lg mb-2 cinzel">Follow us on:</p>
+        <div class="flex justify-center space-x-8 mb-4">
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Facebook"
+          >
+            <i class="fab fa-facebook-square text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Twitter"
+          >
+            <i class="fab fa-twitter text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on Instagram"
+          >
+            <i class="fab fa-instagram text-3xl"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-gray-100 transition transform hover:scale-110"
+            aria-label="Follow us on LinkedIn"
+          >
+            <i class="fab fa-linkedin text-3xl"></i>
+          </a>
+        </div>
+        <p class="text-sm cinzel">© 2025 Sahitya Sagar. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
